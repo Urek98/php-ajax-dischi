@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,20 +10,42 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
 
     <div id="app">
-        <div v-for="disc in discs">
-            {{disc.title}}
+        <nav>
+            <div class="header-section flex">
+                <img class="logo" src="./img/spotify-logo.png" alt="logo" />
+                <div>
+                    <select>
+                        <option>All</option>
+                        <option>Rock</option>
+                        <option>Pop</option>
+                        <option>Jazz</option>
+                        <option>Metal</option>
+                    </select>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div v-for="disc in discs" class='album-card'>
+                <img class='album-img' :src='disc.poster' alt='poster'>
+                <div class='album-title'>{{disc.title}}</div>
+                <div>{{disc.author}}</div>
+                <div>{{disc.year}}</div>
+            </div>
+
         </div>
-    
+
     </div>
 
 
 
 
 
-    <script src="js/script.js"></script>   
+    <script src="js/script.js"></script>
 </body>
+
 </html>
