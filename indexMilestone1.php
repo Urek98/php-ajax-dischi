@@ -13,7 +13,7 @@
 
 <nav>
 <div class="header-section flex">
-    <img class="logo" src="./img/spotify-logo.png" alt="" />
+    <img class="logo" src="./img/spotify-logo.png" alt="logo" />
     <div>
       <select>
         <option>All</option>
